@@ -1,0 +1,42 @@
+@use 'sass:map';
+@use '../../styles/spacing' as sp;
+@use '../../styles/colors' as c;
+@use '../../styles/margin' as margin;
+
+$-shadow-sm: map.get(sp.$sm, 2);
+$-shadow-lg: map.get(sp.$sm, 3);
+
+.card{
+    width: 100%;
+    padding: map.get(sp.$sm, 2);
+    border-radius: map.get(sp.$sm, 1);
+    border: 1px solid c.$border;
+    background-color: c.$white;
+
+    .section{
+        margin: -1 * map.get(sp.$sm, 2);
+        @include margin.direction('sm', bottom, 3);
+        border-top-left-radius: map.get(sp.$sm, 1);
+        border-top-right-radius: map.get(sp.$sm, 1);
+        padding: map.get(sp.$sm, 2);
+    }
+
+    .section-main{
+        background-color: c.$informatic;
+        color: c.$white;
+    }
+}
+
+.lg{
+    border-radius: map.get(sp.$sm, 2);
+    padding: map.get(sp.$sm, 4);
+
+    .section{
+        margin: -1 * map.get(sp.$sm, 4);
+        @include margin.direction('sm', bottom, 3);
+        border-top-left-radius: map.get(sp.$sm, 2);
+        border-top-right-radius: map.get(sp.$sm, 2);
+        padding: map.get(sp.$sm, 4);
+    }
+}
+

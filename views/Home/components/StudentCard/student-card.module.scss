@@ -1,0 +1,53 @@
+@use 'sass:map';
+@use '../../../../styles/spacing' as sp;
+@use '../../../../styles/fonts' as f;
+@use '../../../../styles/margin' as margin;
+@use '../../../../styles/colors' as c;
+
+.container{
+    max-width: 250px;
+    margin: map.get(sp.$sm, 4);
+    text-align: center;
+
+    &:hover{
+        cursor: pointer;
+    }
+
+    .profile-img{
+        width: 135px;
+        height: 135px;
+        border-radius: 50%;
+        @include margin.direction('lg', top, 1);
+        @include margin.direction('sm', bottom, 4);
+    }
+
+    h5{
+        font-size: map.get(f.$size, 6);
+        @include margin.sm(0, 0, 3, 0);
+        background-color: #F665A9;
+        width: fit-content;
+        margin: 0 auto;
+        padding: 4px 8px;
+        border-radius: 8px;
+    }
+
+    h6{
+        font-size: map.get(f.$size, 4);
+        font-weight: normal;
+        @include margin.sm(2);
+    }
+
+    .indicator{
+        
+        p{
+            font-weight: bold;
+            margin: 0;
+        }
+
+        label{
+            font-size: map-get(f.$size, 2);
+            color: c.$border;
+        }
+    }
+
+}

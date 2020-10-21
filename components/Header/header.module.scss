@@ -1,0 +1,14 @@
+@use 'sass:map';
+@use '../../styles/colors' as c;
+@use '../../styles/spacing' as sp;
+
+.header{
+    background-color: c.$main;
+    color: c.$white;
+    padding: map.get(sp.$sm, 3);
+
+    .title{
+        margin: 0;
+        text-align: center;
+    }
+}

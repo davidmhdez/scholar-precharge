@@ -1,0 +1,8 @@
+@use '../../styles/fonts' as f;
+
+.container{
+    h3{
+        text-align: center;
+        font-size: map-get(f.$size , 6);
+    }
+}

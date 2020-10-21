@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Amanda Cortes",
+        "career": "Informatica",
+        "semester": 2,
+        "profileImg": "p4.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Rafael Medina",
+        "career": "Informatica",
+        "semester": 6,
+        "profileImg": "p5.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Karina Castillo",
+        "career": "Informatica",
+        "semester": 4,
+        "profileImg": "p6.jpg"
+    }
+]

@@ -1,0 +1,30 @@
+@use 'sass:map';
+@use 'spacing' as sp;
+
+$valid-types: 'sm' 'lg';
+
+@mixin sm( $margins... ) {
+    $values: sp.sm('margin', $margins);
+    $property: map-get($values, 'prop-name');
+    $prop-value: map-get($values , 'prop-value');
+
+    #{$property}: $prop-value
+    
+}
+
+@mixin lg( $margins... ) {
+    $values: sp.lg('margin', $margins);
+    $property: map-get($values, 'prop-name');
+    $prop-value: map-get($values , 'prop-value');
+
+    #{$property}: $prop-value
+}
+
+
+@mixin direction($type, $direction, $size ){
+    $values: sp.direction($type, $direction, $size, 'margin');
+    $property: map-get($values, 'prop-name');
+    $prop-value: map-get($values , 'prop-value');
+
+    #{$property}: $prop-value
+}
