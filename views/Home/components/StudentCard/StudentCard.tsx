@@ -1,3 +1,4 @@
+import { log } from 'console';
 import Link from 'next/link';
 import React from 'react';
 import Card, { ColorSection } from '../../../../components/Card';
@@ -10,13 +11,14 @@ type Props = {
 }
 
 function StudentCard({student}: Props) {
+
     return (
         <Link href={`/precharge`} >
             <div className={stydentCardStyles.container}>
                 <Card lg width="270px">
                     <ColorSection theme="main">
-                        <img className={stydentCardStyles['profile-img']} src={student.profileImg} alt={student.name}/>
-                        <h5>{student.name}</h5>
+                        <img className={stydentCardStyles['profile-img']} src={student.profileimg.url} alt={student.name}/>
+                        <h5>{`${student.name} ${student.lastname}`}</h5>
                         <h6>{student.career}</h6>
                     </ColorSection>
                         <FlexContainer alignX="space-between">

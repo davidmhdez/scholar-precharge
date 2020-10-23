@@ -1,13 +1,16 @@
 import React from 'react';
-import Student from '../../../../interfaces/Student';
-import studentData from '../../../../utils/studentData.json';
+import student from '../../../../interfaces/Student';
 import StudentCard from '../StudentCard';
 import { FlexContainer, FlexColumn } from '../../../../components/Layout/Flex';
 
-function StudentList() {
+type Props = {
+    students: student[]
+}
+
+function StudentList({students}: Props) {
     return (
             <FlexContainer alignX="center">
-                {studentData.map((student: Student) => (
+                {students.map((student: student) => (
                     <FlexColumn key={student.id}>
                         <StudentCard student={student}/>
                     </FlexColumn>

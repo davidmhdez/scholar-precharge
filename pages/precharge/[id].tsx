@@ -1,10 +1,12 @@
 import React from 'react';
+import BaseLayout from '../../components/Layout/BaseLayout';
+import PrechargeView from '../../views/Precharge';
 
 function ViewPrecharge() {
     return (
-        <div>
-            from view precharge
-        </div>
+        <BaseLayout>
+            <PrechargeView/>
+        </BaseLayout>
     );
 }
 
